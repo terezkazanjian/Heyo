@@ -1,0 +1,101 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+/* zocial */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header nav{
+    height: 40px;
+    padding-top: 7px;
+    background: rgba(74, 173, 190, 0.664);
+}
+
+header nav ul{
+    margin: 0;
+    padding-right: 40px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li{
+    padding-right: 20px;
+}
+
+header nav ul li a {
+    color: purple;
+    font-size: 1.4em;  
+}
+header div{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+header div img {
+    width: 100%;
+}
+
+header div h1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);color: white;
+    font-size: 3em;
+}
+
+header div h3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+}
+
+header div a {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: purple;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;    
+    padding: 5px;
+}
+
+section{
+}
+section button{
+    margin-bottom: 20px;
+}
+i{
+    font-size: 23px;
+    font-style: normal;
+}
+
+.form-control {
+    box-shadow: none;
+    border: 1px solid #f1f1f1;
+}
+
+.form-control {
+    display: block;
+    width: 60%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+} 
+

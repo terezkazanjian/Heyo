@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Influencer Go</title>
+    <link rel="stylesheet" href="style.css">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Find An Influencer</a></li>
+          <li><a href="Apply.html">Apply As An Influencer</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>  
+        </nav>
+        <div>
+            <img src = "background.jpg">
+            <h1>Influencer Go</h1>
+            <h3>Discover, connect and promote your business</h3>
+            <a href = "#form">Find An Influencer</a>
+        </div>
+    </header>
+    <section id = "form">
+        <p >
+            <strong><em>You Need Traffic From:</em></strong>
+            <input type="checkbox"id="facebook" >
+            <i class="brandico-facebook-rect"></i>
+            <input type="checkbox" id="instagram">
+            <i class="brandico-instagram-filled"></i>
+            <input type="checkbox" id="twitter">
+            <i class="brandico-twitter-bird"></i>
+            <br></p>
+
+        
+      
+        <br><p><strong><em>Your Main Audience Need To Be From:</em></strong> 
+        <input type="radio" id="bla" value="United States">United States
+        <input type="radio" id="bla">Europe 
+        <input type="radio" id="bla"> Austalia </p><br><br>
+
+       <p><strong>Your Audiences' Demographics Are:</strong><select>
+           <option id="18fem">18-28 age Female</option>
+           <option id="18male">18-28 male</option>
+           <option id="28fem">28-38 Female</option>
+           <option id="28male">28-38 male</option></select></p>
+           <br>
+
+    <p><strong>Your Business Type:</strong><select>
+                <option id="bla">women/man clothing</option>
+                <option id="bla"> business</option>
+                <option id="bla">fitness</option>
+                <option id="bla">coaching</option></select></p>
+                <br>
+     
+<button onclick="HandleClick()">Submit</button>
+    </section>
+<section id = "result" style="display: none;">
+    Username= Instashop <br/> 
+    Followers=200k <br/> 
+    Rate per Post: 15$
+</section>
+</body>
+</html>
+
+<script>
+        function HandleClick(){
+            console.log("test")
+            document.getElementById("result").style.display = "block"
+        }
+
+    </script>
