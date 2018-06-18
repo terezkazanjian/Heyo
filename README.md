@@ -1,3 +1,7 @@
 # Heyo
+
+## Languages
 HTML - CSS Design
-Influencer website
+
+## Description
+Influencer website template
