@@ -13,6 +13,45 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script>
+		function Apply(){
+			
+			var e = document.getElementById("audiences");
+			var audiences = e.options[e.selectedIndex].value;
+			var e1 = document.getElementById("business");
+			var business = e1.options[e1.selectedIndex].value; 
+			var sm = getRadioCheckedValue("sm");
+			var bla = '';
+			if (document.getElementById('bla1').checked) {
+			  bla = document.getElementById('bla1').value;
+			}
+			else if (document.getElementById('bla2').checked) {
+			  bla = document.getElementById('bla2').value;
+			}
+			else if (document.getElementById('bla3').checked) {
+			  bla = document.getElementById('bla3').value;
+			}
+
+			alert("Your Audiences' Demographics Are : " + audiences + " \nYour Business Type : " + business + " \nTraffic From: " + sm + " \nYour Main Audience Need To Be From: " + bla);
+		}
+		
+		function getRadioCheckedValue(radio_name)
+		{
+			var oRadio = document.forms[0].elements[radio_name];
+
+			var value = ''; 
+			for(var i = 0; i < oRadio.length; i++)
+			{
+			  if(oRadio[i].checked)
+			  {
+				 value = value + oRadio[i].value + "; ";
+			  }
+			} 
+			return value;
+		}
+
+	</script>
 </head>
 <body>
     <header>
@@ -47,7 +86,7 @@
                         <div class="col-md-12 col-sm-12">
                            <div class="form-group">
                               <label>Your Audiences' Demographics Are <span class="required">*</span></label>
-							   <select class="form-control">
+							   <select class="form-control" id="audiences">
 								   <option id="18fem">18-28 age Female</option>
 								   <option id="18male">18-28 male</option>
 								   <option id="28fem">28-38 Female</option>
@@ -58,7 +97,7 @@
                         <div class="col-md-12 col-sm-12">
                            <div class="form-group">
                               <label>Your Business Type <span class="required">*</span></label>
-								<select class="form-control">
+								<select class="form-control" id="business">
 										<option id="bla">women/man clothing</option>
 										<option id="bla"> business</option>
 										<option id="bla">fitness</option>
@@ -71,13 +110,13 @@
                            <div class="form-group">
                               <label>You Need Traffic From</label>
 							  <br/>
-								<input type="checkbox" id="facebook">
+								<input type="checkbox" name="sm" value="Facebook" id="facebook">
 								<i class="brandico-facebook-rect"></i>
 								&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type="checkbox" id="instagram">
+								<input type="checkbox" name="sm" value="Instagram" id="instagram">
 								<i class="brandico-instagram-filled"></i>
 								&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type="checkbox" id="twitter">
+								<input type="checkbox" name="sm" value="Twitter" id="twitter">
 								<i class="brandico-twitter-bird"></i>
                            </div>
                         </div>
@@ -85,11 +124,11 @@
                            <div class="form-group">
                               <label>Your Main Audience Need To Be From</label>
 							  <br/>
-								<input type="radio" name="country" id="bla" value="United States">United States
+								<input type="radio" name="country" id="bla1" value="United States">United States
 								&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type="radio" name="country" id="bla">Europe 
+								<input type="radio" name="country" id="bla2" value="Europe">Europe 
 								&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type="radio" name="country" id="bla"> Austalia </p><br><br>
+								<input type="radio" name="country" id="bla3" value="Austalia"> Austalia </p><br><br>
                            </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
